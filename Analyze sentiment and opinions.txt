@@ -1,0 +1,475 @@
+Analyze sentiment and opinions
+Texto original 
+Durante minha estadia em um hotel em São Paulo, tive uma experiência razoavelmente satisfatória. O conforto do quarto foi bom, mas poderia ser melhor — dou nota 7 nesse quesito. Um dos pontos que mais me incomodou foi a distância até o aeroporto, que dificultou bastante os deslocamentos, motivo pelo qual avalio esse item com nota 4.
+
+A conexão Wi-Fi apresentou algumas instabilidades, o que impactou um pouco minha produtividade e conectividade, então atribuo nota 6. Por outro lado, a limpeza dos ambientes estava adequada, com nota 7, e o atendimento se destacou positivamente, com equipe muito cordial e prestativa — merecendo uma nota 9.
+
+Os serviços oferecidos no geral foram eficientes, com nota 8, e o café da manhã estava bom, com opções variadas e qualidade satisfatória, que considero nota 7.
+
+No geral, foi uma boa hospedagem, com alguns pontos fortes e outros que poderiam ser aprimorados, principalmente em relação à localização e à internet.
+Result em Json
+{
+    "documents": [
+        {
+            "id": "id__4490",
+            "sentiment": "mixed",
+            "confidenceScores": {
+                "positive": 0.71,
+                "neutral": 0.01,
+                "negative": 0.28
+            },
+            "sentences": [
+                {
+                    "sentiment": "positive",
+                    "confidenceScores": {
+                        "positive": 1,
+                        "neutral": 0,
+                        "negative": 0
+                    },
+                    "offset": 0,
+                    "length": 97,
+                    "text": "Durante minha estadia em um hotel em São Paulo, tive uma experiência razoavelmente satisfatória. ",
+                    "targets": [
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 1,
+                                "negative": 0
+                            },
+                            "offset": 57,
+                            "length": 11,
+                            "text": "experiência",
+                            "relations": [
+                                {
+                                    "relationType": "assessment",
+                                    "ref": "#/documents/0/sentences/0/assessments/0"
+                                }
+                            ]
+                        }
+                    ],
+                    "assessments": [
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 1,
+                                "negative": 0
+                            },
+                            "offset": 83,
+                            "length": 12,
+                            "text": "satisfatória",
+                            "isNegated": false
+                        }
+                    ]
+                },
+                {
+                    "sentiment": "positive",
+                    "confidenceScores": {
+                        "positive": 0.98,
+                        "neutral": 0,
+                        "negative": 0.02
+                    },
+                    "offset": 97,
+                    "length": 81,
+                    "text": "O conforto do quarto foi bom, mas poderia ser melhor — dou nota 7 nesse quesito. ",
+                    "targets": [
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 1,
+                                "negative": 0
+                            },
+                            "offset": 99,
+                            "length": 8,
+                            "text": "conforto",
+                            "relations": [
+                                {
+                                    "relationType": "assessment",
+                                    "ref": "#/documents/0/sentences/1/assessments/0"
+                                }
+                            ]
+                        },
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 1,
+                                "negative": 0
+                            },
+                            "offset": 111,
+                            "length": 6,
+                            "text": "quarto",
+                            "relations": [
+                                {
+                                    "relationType": "assessment",
+                                    "ref": "#/documents/0/sentences/1/assessments/0"
+                                }
+                            ]
+                        }
+                    ],
+                    "assessments": [
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 1,
+                                "negative": 0
+                            },
+                            "offset": 122,
+                            "length": 3,
+                            "text": "bom",
+                            "isNegated": false
+                        }
+                    ]
+                },
+                {
+                    "sentiment": "negative",
+                    "confidenceScores": {
+                        "positive": 0,
+                        "neutral": 0,
+                        "negative": 0.99
+                    },
+                    "offset": 178,
+                    "length": 157,
+                    "text": "Um dos pontos que mais me incomodou foi a distância até o aeroporto, que dificultou bastante os deslocamentos, motivo pelo qual avalio esse item com nota 4.\n",
+                    "targets": [],
+                    "assessments": []
+                },
+                {
+                    "sentiment": "negative",
+                    "confidenceScores": {
+                        "positive": 0,
+                        "neutral": 0.05,
+                        "negative": 0.95
+                    },
+                    "offset": 335,
+                    "length": 134,
+                    "text": "A conexão Wi-Fi apresentou algumas instabilidades, o que impactou um pouco minha produtividade e conectividade, então atribuo nota 6. ",
+                    "targets": [
+                        {
+                            "sentiment": "negative",
+                            "confidenceScores": {
+                                "positive": 0.01,
+                                "negative": 0.99
+                            },
+                            "offset": 338,
+                            "length": 13,
+                            "text": "conexão Wi-Fi",
+                            "relations": [
+                                {
+                                    "relationType": "assessment",
+                                    "ref": "#/documents/0/sentences/3/assessments/0"
+                                }
+                            ]
+                        }
+                    ],
+                    "assessments": [
+                        {
+                            "sentiment": "negative",
+                            "confidenceScores": {
+                                "positive": 0.01,
+                                "negative": 0.99
+                            },
+                            "offset": 371,
+                            "length": 14,
+                            "text": "instabilidades",
+                            "isNegated": false
+                        }
+                    ]
+                },
+                {
+                    "sentiment": "positive",
+                    "confidenceScores": {
+                        "positive": 1,
+                        "neutral": 0,
+                        "negative": 0
+                    },
+                    "offset": 469,
+                    "length": 174,
+                    "text": "Por outro lado, a limpeza dos ambientes estava adequada, com nota 7, e o atendimento se destacou positivamente, com equipe muito cordial e prestativa — merecendo uma nota 9.\n",
+                    "targets": [
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 0.92,
+                                "negative": 0.08
+                            },
+                            "offset": 488,
+                            "length": 7,
+                            "text": "limpeza",
+                            "relations": [
+                                {
+                                    "relationType": "assessment",
+                                    "ref": "#/documents/0/sentences/4/assessments/0"
+                                }
+                            ]
+                        },
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 0.92,
+                                "negative": 0.08
+                            },
+                            "offset": 500,
+                            "length": 9,
+                            "text": "ambientes",
+                            "relations": [
+                                {
+                                    "relationType": "assessment",
+                                    "ref": "#/documents/0/sentences/4/assessments/0"
+                                }
+                            ]
+                        },
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 1,
+                                "negative": 0
+                            },
+                            "offset": 543,
+                            "length": 11,
+                            "text": "atendimento",
+                            "relations": [
+                                {
+                                    "relationType": "assessment",
+                                    "ref": "#/documents/0/sentences/4/assessments/1"
+                                }
+                            ]
+                        },
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 1,
+                                "negative": 0
+                            },
+                            "offset": 586,
+                            "length": 6,
+                            "text": "equipe",
+                            "relations": [
+                                {
+                                    "relationType": "assessment",
+                                    "ref": "#/documents/0/sentences/4/assessments/2"
+                                },
+                                {
+                                    "relationType": "assessment",
+                                    "ref": "#/documents/0/sentences/4/assessments/3"
+                                }
+                            ]
+                        }
+                    ],
+                    "assessments": [
+                        {
+                            "sentiment": "mixed",
+                            "confidenceScores": {
+                                "positive": 0.92,
+                                "negative": 0.08
+                            },
+                            "offset": 517,
+                            "length": 8,
+                            "text": "adequada",
+                            "isNegated": false
+                        },
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 1,
+                                "negative": 0
+                            },
+                            "offset": 567,
+                            "length": 13,
+                            "text": "positivamente",
+                            "isNegated": false
+                        },
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 1,
+                                "negative": 0
+                            },
+                            "offset": 599,
+                            "length": 7,
+                            "text": "cordial",
+                            "isNegated": false
+                        },
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 1,
+                                "negative": 0
+                            },
+                            "offset": 609,
+                            "length": 10,
+                            "text": "prestativa",
+                            "isNegated": false
+                        }
+                    ]
+                },
+                {
+                    "sentiment": "positive",
+                    "confidenceScores": {
+                        "positive": 1,
+                        "neutral": 0,
+                        "negative": 0
+                    },
+                    "offset": 643,
+                    "length": 160,
+                    "text": "Os serviços oferecidos no geral foram eficientes, com nota 8, e o café da manhã estava bom, com opções variadas e qualidade satisfatória, que considero nota 7.\n",
+                    "targets": [
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 1,
+                                "negative": 0
+                            },
+                            "offset": 648,
+                            "length": 8,
+                            "text": "serviços",
+                            "relations": [
+                                {
+                                    "relationType": "assessment",
+                                    "ref": "#/documents/0/sentences/5/assessments/0"
+                                }
+                            ]
+                        },
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 1,
+                                "negative": 0
+                            },
+                            "offset": 711,
+                            "length": 4,
+                            "text": "café",
+                            "relations": [
+                                {
+                                    "relationType": "assessment",
+                                    "ref": "#/documents/0/sentences/5/assessments/1"
+                                }
+                            ]
+                        },
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 1,
+                                "negative": 0
+                            },
+                            "offset": 741,
+                            "length": 6,
+                            "text": "opções",
+                            "relations": [
+                                {
+                                    "relationType": "assessment",
+                                    "ref": "#/documents/0/sentences/5/assessments/2"
+                                }
+                            ]
+                        },
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 1,
+                                "negative": 0
+                            },
+                            "offset": 759,
+                            "length": 9,
+                            "text": "qualidade",
+                            "relations": [
+                                {
+                                    "relationType": "assessment",
+                                    "ref": "#/documents/0/sentences/5/assessments/3"
+                                }
+                            ]
+                        }
+                    ],
+                    "assessments": [
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 1,
+                                "negative": 0
+                            },
+                            "offset": 683,
+                            "length": 10,
+                            "text": "eficientes",
+                            "isNegated": false
+                        },
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 1,
+                                "negative": 0
+                            },
+                            "offset": 732,
+                            "length": 3,
+                            "text": "bom",
+                            "isNegated": false
+                        },
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 1,
+                                "negative": 0
+                            },
+                            "offset": 748,
+                            "length": 8,
+                            "text": "variadas",
+                            "isNegated": false
+                        },
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 1,
+                                "negative": 0
+                            },
+                            "offset": 769,
+                            "length": 12,
+                            "text": "satisfatória",
+                            "isNegated": false
+                        }
+                    ]
+                },
+                {
+                    "sentiment": "positive",
+                    "confidenceScores": {
+                        "positive": 1,
+                        "neutral": 0,
+                        "negative": 0
+                    },
+                    "offset": 803,
+                    "length": 151,
+                    "text": "No geral, foi uma boa hospedagem, com alguns pontos fortes e outros que poderiam ser aprimorados, principalmente em relação à localização e à internet.",
+                    "targets": [
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 1,
+                                "negative": 0
+                            },
+                            "offset": 828,
+                            "length": 10,
+                            "text": "hospedagem",
+                            "relations": [
+                                {
+                                    "relationType": "assessment",
+                                    "ref": "#/documents/0/sentences/6/assessments/0"
+                                }
+                            ]
+                        }
+                    ],
+                    "assessments": [
+                        {
+                            "sentiment": "positive",
+                            "confidenceScores": {
+                                "positive": 1,
+                                "negative": 0
+                            },
+                            "offset": 824,
+                            "length": 3,
+                            "text": "boa",
+                            "isNegated": false
+                        }
+                    ]
+                }
+            ],
+            "warnings": []
+        }
+    ],
+    "errors": [],
+    "modelVersion": "2025-01-01"
+}
